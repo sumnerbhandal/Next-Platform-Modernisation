@@ -1,0 +1,25 @@
+button {
+  height: 2.75rem;
+  padding: 0 1rem;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+  cursor: pointer;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  button {
+    height: 2.25rem;
+    font-size: 0.75rem;
+  }
+}
+
+input.demo {
+  max-width: 40%;
+}
+
+input:focus {
+  outline: none;
+  border: 0.125rem solid #000;
+}

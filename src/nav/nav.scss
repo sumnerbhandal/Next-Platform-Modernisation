@@ -1,0 +1,217 @@
+.next-site {
+  
+  .navigation-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+
+  .navigation {
+    * {
+      display: flex;
+      align-items: center;
+    }
+    .upper-nav,
+    .lower-nav {
+      height: 2.75rem;
+  
+    }
+
+    .upper-nav {
+      @media  (min-width: 768px) {
+        height: 3.75rem;
+      }
+
+      .section {
+        justify-content: space-between;
+        align-items: center;
+
+        .brand-search {
+          .brand-logo {
+            cursor: pointer;
+
+            @media  (min-width: 768px) {
+              height: 1.5rem;
+              margin-left: -1px;
+            }
+
+            a {
+              padding: 0;
+
+              @media  (min-width: 768px) {
+                max-height: 2rem;
+              }
+
+              // svg {
+              //   width: 100%;
+              // }
+            }
+          }
+
+          .searchField {
+            width: 16.25rem;
+            height: 2.25rem;
+            margin-left: 2rem;
+            input {
+              height: 100%;
+              border: 0;
+              width: calc(100% - 2.125rem);
+              padding: 0;
+              padding-left: 0.625rem;
+              background: 0;
+            }
+
+            button {
+              width: 2.25rem;
+              background: none;
+              border: 0;
+              padding: 0;
+              margin-left: 0;
+              display: flex;
+              justify-content: center;
+              padding: 0.5rem;
+            }
+          }
+        }
+        .quick-links {
+
+          > div {
+            .my-account-desktop-icon {
+              align-items: center;
+              margin-right: -4px;
+              svg {
+                height: 1rem;
+                padding: 0;
+              }
+            }
+            a {
+              color: inherit;
+              text-decoration: none;
+
+              @media  (min-width: 768px) {
+                margin-right: 1rem;
+                font-size: 0.75rem;
+                letter-spacing: 0.0075rem;
+
+                &:last-child {
+                  margin-right: -0.25rem;
+                }
+              }
+
+              @media  (min-width: 1024px) {
+                &:last-child {
+                  margin-right: 0rem;
+                }
+              }
+            }
+
+          }
+          svg {
+            padding: 0.75rem;
+            width: 2.75rem;
+            height: 2.75rem;
+
+            &.favourites {
+              padding: 0.6875rem;
+
+              @media  (min-width: 1024px) {
+                margin-left: 0.75rem;
+                width: 2.5rem;
+                padding: 0.5rem
+              }
+            }
+
+            @media  (min-width: 768px) {
+              height: 3rem;
+              width: 3rem;
+              margin-right: 0.125rem;
+            }
+            @media  (min-width: 1024px) {
+              margin-right: 0;
+            }
+          }
+
+          .bagIcon {
+            a {
+              position: relative;
+
+              p {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                font-size: 0.6875rem;
+                font-weight: 500;
+                width: 0.75rem;
+                justify-content: center;
+
+                @media  (min-width: 768px) {
+                  font-size: 0.8125rem;
+                  right: 1.25rem;
+                  top: 1.0625rem;
+                }
+                @media  (min-width: 1024px) {
+                  top: 1.0625rem;
+                  right: 1.125rem;
+                }
+              }
+            }
+          }
+
+          button {
+            width: 6.25rem;
+            height: 2.25rem;
+            padding: 0.75rem;
+            margin-left: 0.625rem;
+            display: none;
+            font-size: 0.75rem;
+            align-items: center;
+            text-transform: uppercase;
+            letter-spacing: 0.0625rem;
+
+            @media  (min-width: 768px) {
+              display: flex;
+              justify-content: center
+            }
+
+            @media (min-width: 1280px) {
+              width: 10rem;
+            }
+          }
+          
+          .country-flag-container {
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            height: 2.75rem;
+            width: 2.75rem;
+            margin-right: -0.675rem;
+
+            @media  (min-width: 768px) {
+              margin-left: 0.625rem;
+            }
+
+            img {
+              height: 1.375rem;
+              width: 1.375rem;
+              z-index: 0;
+              border: 1px solid #000;
+              border-radius: 50%;
+
+              @media  (min-width: 768px) {
+                height: 1.675rem;
+                width: 1.675rem;
+                z-index: 0;
+                border: 1px solid #000;
+                border-radius: 50%;
+              }
+            }
+          }
+
+        }
+      }
+
+    }
+  }
+
+}
+}

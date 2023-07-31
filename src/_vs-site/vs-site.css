@@ -1,0 +1,42 @@
+.vs label,
+.vs span.MuiTab-wrapper,
+.vs p,
+.vs h1,
+.vs h2,
+.vs h3,
+.vs h4,
+.vs h5 {
+  transform: translateY(0.125rem);
+}
+
+.vs button {
+  padding-top: 0.125rem;
+}
+
+.vs.centred-nav
+  .navigation-container
+  .navigation
+  .upper-nav
+  .section
+  .quick-links
+  button {
+  padding-top: 0.875rem !important;
+  font-size: 1rem;
+}
+
+.vs button.cta {
+  /* font-family: BentonSansComp, "Helvetica Neue", Arial, sans-serif; */
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+}
+
+.vs
+  .section.pdp
+  .pdp-content
+  .product-information
+  .product-details
+  .product-options
+  .fit-container-scroll
+  button {
+  padding-top: 0.125rem !important;
+}

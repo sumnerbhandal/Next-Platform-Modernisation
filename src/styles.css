@@ -1,0 +1,494 @@
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+nav,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+nav {
+  width: 100vw;
+  height: 4rem;
+  background-color: #000;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+}
+
+body {
+  overflow-y: scroll;
+}
+
+* {
+  overflow-anchor: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  font-size: 16px;
+}
+
+main {
+  width: 100%;
+  margin-top: 0;
+}
+
+@media (min-width: 1024px) {
+  main {
+    width: calc(50% - 2rem);
+    margin-top: 2rem;
+    max-height: calc(100vh - 6rem);
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+  main::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@font-face {
+  font-family: "AzoSans";
+  src: url("https://www.next.co.uk/Fonts/AzoSans-Light-webfont.eot");
+  src: url("https://www.next.co.uk/Fonts/AzoSans-Light-webfont.eot")
+      format("embedded-opentype"),
+    url("https://www.next.co.uk/Fonts/AzoSans-Light-webfont.woff")
+      format("woff"),
+    url("https://www.next.co.uk/Fonts/AzoSans-Light-webfont.ttf")
+      format("truetype"),
+    url("https://www.next.co.uk/Fonts/AzoSans-Light-webfont.svg") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AzoSans";
+  src: url("https://www.next.co.uk/Fonts/AzoSans-Regular-webfont.eot");
+  src: url("https://www.next.co.uk/Fonts/AzoSans-Regular-webfont.eot")
+      format("embedded-opentype"),
+    url("https://www.next.co.uk/Fonts/AzoSans-Regular-webfont.woff")
+      format("woff"),
+    url("https://www.next.co.uk/Fonts/AzoSans-Regular-webfont.ttf")
+      format("truetype"),
+    url("https://www.next.co.uk/Fonts/AzoSans-Regular-webfont.svg")
+      format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AzoSans";
+  src: url("https://www.next.co.uk/Fonts/AzoSans-Medium-webfont.eot");
+  src: url("https://www.next.co.uk/Fonts/AzoSans-Medium-webfont.eot")
+      format("embedded-opentype"),
+    url("https://www.next.co.uk/Fonts/AzoSans-Medium-webfont.woff")
+      format("woff"),
+    url("https://www.next.co.uk/Fonts/AzoSans-Medium-webfont.ttf")
+      format("truetype"),
+    url("https://www.next.co.uk/Fonts/AzoSans-Medium-webfont.svg") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BentonSans";
+  src: url("https://sumnerbhandal.github.io/font-repo/BentoSansBook.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BentonSans";
+  src: url("https://sumnerbhandal.github.io/font-repo/BentoSansMedium.woff")
+    format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BentonSans";
+  src: url("https://sumnerbhandal.github.io/font-repo/BentonSansComp.woff")
+    format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+* {
+  font-family: var(--site-font);
+  font-weight: var(--fontWeightRegular);
+  font-size: 0.875rem;
+  box-sizing: border-box;
+  line-height: 1.5;
+  letter-spacing: 0.0075rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+strong {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 1.25rem;
+}
+
+h2 {
+  font-size: 1.125rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+hr {
+  border: 1px solid #000;
+  border-bottom: 0;
+  margin-block-start: 1.5rem;
+  margin-block-end: 1.5rem;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+p {
+  display: block;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-size: 0.875rem;
+  letter-spacing: 0.0075rem;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Some browsers will not display the caret when using calc, so we put the fallback first */
+  background: url("https://next-sandbox.azureedge.net/icons/shared/chevron.svg")
+    white no-repeat 98.5% !important; /* !important used for overriding all other customisations */
+  background: url("https://next-sandbox.azureedge.net/icons/shared/chevron.svg")
+    white no-repeat calc(100% - 0.75rem) !important; /* Better placement regardless of input width */
+}
+/*For IE*/
+select::-ms-expand {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Section defining */
+
+.section {
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.section p.paragraph {
+  width: 80%;
+}
+
+.section.theme {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 0 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .section.theme {
+    flex-direction: unset;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+}
+
+/* @media (min-width: 1600px) {
+  .section {
+    max-width: 1440px;
+    padding: 0;
+  }
+} */
+
+.background-overlay {
+  background: rgba(0, 0, 0, 0.9);
+  min-height: 100vh;
+  height: 100%;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  transition: all 0.2s ease;
+}
+
+/* Setting Dictating */
+
+.form-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-field {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.form-field-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+.form-field-container.last {
+  margin-bottom: 2rem;
+}
+
+label {
+  width: 20%;
+  margin-right: 2rem;
+  line-height: 1.5;
+}
+input,
+.component-example {
+  width: calc(80% - 2rem);
+  height: 2.75rem;
+  padding: 0 0.75rem;
+}
+
+.component-example {
+  padding: 0;
+}
+.input-description {
+  width: calc(80% - 2rem);
+  display: flex;
+  margin-left: calc(20% + 2rem);
+  margin-top: 1rem;
+  margin-bottom: 1.75rem;
+  color: #515151;
+  line-height: 1.5;
+}
+
+.form-section.preview {
+  flex-direction: column-reverse;
+}
+
+.form-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: #f7f7f7;
+  margin: 1em 0px;
+}
+
+@media (min-width: 1024px) {
+  .form-button {
+    width: calc(50% - 4rem);
+    height: 8rem;
+  }
+  .form-section.preview {
+    flex-direction: row;
+  }
+}
+.form-button button {
+  margin: 0.75rem;
+}
+
+nav .section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: scroll;
+}
+
+nav .section::-webkit-scrollbar {
+  display: none;
+}
+
+nav .section .nav-links {
+  flex-shrink: 0;
+  height: 64px;
+  align-items: center;
+  display: flex;
+}
+
+nav .section .nav-links p {
+  font-size: 1rem;
+  margin: 0 0.75rem;
+}
+
+nav .section .nav-links span {
+  height: 40%;
+  margin: 0 1rem;
+  border-left: 1px solid #fff;
+}
+
+nav .section a {
+  font-size: 1rem;
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+  margin: 0 0.75rem;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+nav .section a:hover {
+  text-decoration: none;
+}
+
+nav .section a.logo {
+  margin-left: 0;
+  margin-right: 2rem;
+}
+
+pre span.active {
+  background: orange;
+  color: black;
+  box-shadow: 0 0 0 6px orange;
+  border-radius: 4px;
+  outline: 0;
+}
+
+/* MUI Overrides */
+
+main .MuiAccordionSummary-content.Mui-expanded,
+main .MuiAccordionSummary-content,
+main .MuiAccordion-root.Mui-expanded {
+  margin: 0;
+}
+
+main .MuiAccordionSummary-content {
+  align-items: center;
+  justify-content: space-between;
+}
+
+main .MuiAccordionSummary-content .example-component {
+  margin-right: 0.5rem;
+}
+
+main .MuiPaper-elevation1 {
+  box-shadow: none;
+}
+
+main .MuiAccordionSummary-root {
+  padding: 0;
+  min-height: 72px;
+}
+
+main .MuiAccordion-root:before {
+  height: 0;
+}
+
+main .MuiIconButton-edgeEnd {
+  margin-right: 0;
+}
+
+main .MuiIconButton-label {
+  width: 100%;
+  display: flex;
+  align-items: inherit;
+  justify-content: inherit;
+  transform: scale(1.25);
+}
+
+main .MuiAccordionSummary-root.Mui-expanded {
+  min-height: 72px;
+}
+
+main .MuiAccordionDetails-root {
+  display: flex;
+  padding: 0;
+}
+
+main .MuiAccordion-root {
+  border-top: 1px solid #c7c5c5;
+}
+
+main .MuiAccordion-rounded,
+main .MuiAccordion-rounded:last-child {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+main .MuiAccordion-rounded,
+main .MuiAccordion-rounded:first-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.pageContent {
+  padding-top: 5.5rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .pageContent {
+    padding-top: 6.5rem;
+  }
+}
+
+.loading-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading {
+  content: "";
+  position: absolute;
+  border-radius: 100%;
+  width: 1rem;
+  height: 1rem;
+  border: 0.125rem solid rgba(255, 255, 255, 0.05);
+  border-left-color: #000;
+  border-top-color: #000;
+  animation: spin 0.6s infinite linear;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(359deg);
+  }
+}

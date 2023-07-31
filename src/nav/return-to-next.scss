@@ -1,0 +1,37 @@
+.return-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.return-banner .next-logo svg {
+  height: auto;
+  width: 2.375rem;
+  margin: 0 0.125rem;
+}
+
+.return-banner a {
+  text-decoration: underline;
+  cursor: pointer;
+  color: inherit;
+}
+
+.return-banner .close-icon svg {
+  transform: translateX(16px);
+  cursor: pointer;
+}
+
+.close-icon {
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .return-banner .next-logo svg {
+    width: 2.125rem;
+  }
+  .return-banner p,
+  a {
+    font-size: 12px;
+  }
+}
